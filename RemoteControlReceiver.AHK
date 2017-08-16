@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #singleinstance, force
 
 ;Inputs := "Command, LockMouse"
-Inputs := "Command, Message, Test"
+Inputs := "Command, Message, Test LMAO"
 ;Inputs := "Function, Beep, , "
 
 f::

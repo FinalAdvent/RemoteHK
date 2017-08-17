@@ -23,8 +23,6 @@ GuiControl, Disable, Push
 GuiControl, Disable, Cancel
 GuiControl, , Stat, Pulling from GitHub.
 UrlDownloadToFile, https://raw.githubusercontent.com/FinalAdvent/RemoteHK/master/RCR.ahk , Updated.ahk
-Sleep 500
-FileCopy, RCR.ahk, RCR.OLD
 Sleep 200
 FileDelete,  RCR.ahk
 Sleep 200

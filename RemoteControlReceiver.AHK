@@ -8,7 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Inputs := "Command, Message, Test LMAO"
 ;Inputs := "Function, Beep, , "
 InputBox, Inputs
-f::
+
 StringSplit, InputArray, Inputs , `,,%A_Space%
 If InputArray1 = Command
 	Goto %InputArray2%
@@ -19,6 +19,8 @@ If InputArray1 = Function
 	Else
 		MsgBox, No such Function exists.
 }
+If InputArray1 = Update
+	Update()
 Return
 
 LockMouse:
@@ -85,4 +87,11 @@ Beep(Fq, Dur)
 {
 SoundBeep, %Fq%, %Dur%
 Return
+}
+
+Update()
+{
+	Run, RCU.exe
+	Sleep 5000
+	Reload
 }

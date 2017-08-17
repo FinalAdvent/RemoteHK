@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Version := 0.03
 
 ; Inputs := "Command, LockMouse"
-; Inputs := "Command, Message, Test LMAO"
+; Inputs := "Command, Message, Test asdasd"
 ; Inputs := "Function, Beep, , "
 
 !f::

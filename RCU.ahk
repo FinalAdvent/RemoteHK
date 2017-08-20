@@ -19,7 +19,7 @@ Push:
 GuiControl, Disable, Pull
 GuiControl, Disable, Push
 GuiControl, Disable, Cancel
-Run, cmd /c cd C:\Users\mjdeb\OneDrive\AutoHotKey\RemoteHK & Git status & git add RCU.ahk & Git status & git commit -m "automatic update from RCU.ahk" & Pause
+Run, cmd /c cd C:\Users\mjdeb\OneDrive\AutoHotKey\RemoteHK & Git status & git add RCU.ahk & Git status & git commit -m "automatic update from RCU.ahk" & git push & Pause
 GuiControl, Disable0, Pull
 GuiControl, Disable0, Push
 GuiControl, Disable0, Cancel

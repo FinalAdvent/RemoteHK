@@ -2,17 +2,20 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-#NoTrayIcon
+;#NoTrayIcon
+
+	Gui, New
+	Gui Add, Button, y40 x125 w50 h25 gPull vPull, Pull
+	Gui Add, Button, x20 y40 w50 h25 gPush vPush, Push
+	Gui Add, Button, x230 y40 w50 h25 Default gCancel vCamcel, Cancel 
+	Gui Add, Text, y10 x0 W300 Center, Push or pull from GitHub.
+	Gui, Add, StatusBar, vStat
+	Gui, Show, W300 H100
+	Return
+	
 
 
-Gui, New
-Gui Add, Button, y40 x125 w50 h25 gPull vPull, Pull
-Gui Add, Button, x20 y40 w50 h25 gPush vPush, Push
-Gui Add, Button, x230 y40 w50 h25 Default gCancel vCamcel, Cancel 
-Gui Add, Text, y10 x0 W300 Center, Push or pull from GitHub.
-Gui, Add, StatusBar, vStat
-Gui, Show, W300 H100
-Return
+
 
 Push:
 {
@@ -29,6 +32,7 @@ Push:
 
 Pull:
 {
+	MsgBox
 	GuiControl, Disable, Pull
 	GuiControl, Disable, Push
 	GuiControl, Disable, Cancel
@@ -48,6 +52,12 @@ Pull:
 	GuiControl, Disable0, Pull
 	GuiControl, Disable0, Push
 	GuiControl, Disable0, Cancel
+	; If %1% = Pull
+	{
+		; Msgbox, Done!
+		; ExitApp
+	}
+	
 	Return 
 }
 
